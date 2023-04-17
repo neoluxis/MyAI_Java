@@ -114,7 +114,7 @@ public class Code {
         return code_helloworld_java;
       } else if (ques.contains("python") || ques.contains("Python")) {
         return code_helloworld_python;
-      } else if (ques.contains("c") || ques.contains("C")) {
+      } else if (ques.contains(" c") || ques.contains(" C")) {
         return code_helloworld_c;
       } else if (ques.contains("c++") || ques.contains("C++")) {
         return code_helloworld_cpp;
