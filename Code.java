@@ -1,23 +1,35 @@
 public class Code {
 
+  // 代码
+  // Java Helloworld
   public static String code_helloworld_java =
     "\npublic class HelloWorld {\n\tpublic static void main(String[] args) {\n\t\tSystem.out.println(\"Hello World!\");\n\t}\n}";
+  // Python Helloworld
   public static String code_helloworld_python = "print(\"Hello World!\")";
+  // C Helloworld
   public static String code_helloworld_c =
     "\n#include <stdio.h>\nint main() {\n\tprintf(\"Hello World!\");\n\treturn 0;\n}";
+  // C++ Helloworld
   public static String code_helloworld_cpp =
     "\n#include <iostream>\nusing namespace std;\nint main() {\n\tcout << \"Hello World!\";\n\treturn 0;\n}";
+  // C# Helloworld
   public static String code_helloworld_csharp =
     "\nusing System;\nnamespace HelloWorld {\n\tclass Hello {\n\t\tstatic void Main(string[] args) {\n\t\t\tConsole.WriteLine(\"Hello World!\");\n\t\t\tConsole.ReadKey();\n\t\t}\n\t}\n}";
+  // Assembly Helloworld
   public static String code_helloworld_asm =
     "\nsection .text\n\tglobal _start\n_start:\n\tmov eax, 4\n\tmov ebx, 1\n\tmov ecx, msg\n\tmov edx, msg.len\n\tsyscall\n\tmov eax, 1\n\tmov ebx, 0\n\tsyscall\nsection .data\nmsg db \"Hello World!\", 10\nmsg.len equ $ - msg";
+  // Java Add
   public static String code_add_java =
     "\npublic class Add {\n\tpublic static void main(String[] args) {\n\t\tint a = 1;\n\t\tint b = 2;\n\t\tSystem.out.println(a + b);\n\t}\n}";
+  // Python Add
   public static String code_add_python = "a = 1\nb = 2\nprint(a + b)";
+  // Java Window
   public static String code_window_java =
     "\nimport javax.swing.*;\npublic class Window {\n\tpublic static void main(String[] args) {\n\t\tJFrame frame = new JFrame(\"Hello World!\");\n\t\tJLabel label = new JLabel(\"Hello World!\");\n\t\tframe.add(label);\n\t\tframe.setSize(300, 300);\n\t\tframe.setVisible(true);\n\t}\n}";
+  // Python Window
   public static String code_window_python =
     "\nfrom tkinter import *\nroot = Tk()\nroot.title(\"Hello World!\")\nroot.geometry(\"300x300\")\nlabel = Label(root, text=\"Hello World!\")\nlabel.pack()\nroot.mainloop()";
+  // Java Complex
   public static String code_complex_java =
     """
         \npublic class Complex {
@@ -113,7 +125,8 @@ public class Code {
       } else {
         return "Error: I haven't learn this language yet.";
       }
-    } else if (ques.contains("add") || ques.contains("Add")) {
+    } // Hello World End
+    else if (ques.contains("add") || ques.contains("Add")) {
       if (ques.contains("java") || ques.contains("Java")) {
         return code_add_java;
       } else if (ques.contains("python") || ques.contains("Python")) {
@@ -121,7 +134,8 @@ public class Code {
       } else {
         return "Error: I haven't learn this language yet.";
       }
-    } else if (ques.contains("window") || ques.contains("Window")) {
+    }  // Add End
+    else if (ques.contains("window") || ques.contains("Window")) {
       if (ques.contains("java") || ques.contains("Java")) {
         return code_window_java;
       } else if (ques.contains("python") || ques.contains("Python")) {
@@ -129,14 +143,16 @@ public class Code {
       } else {
         return "Error: I haven't learn this language yet.";
       }
-    } else if (ques.contains("complex") || ques.contains("Complex")) {
+    } // Window End 
+    else if (ques.contains("complex") || ques.contains("Complex")) {
       if (ques.contains("java") || ques.contains("Java")) {
         return code_complex_java;
       } else {
         return "Error: I haven't learn this language yet.";
       }
-    } else {
+    } // Complex End 
+    else {
       return "Error: I haven't learn this question yet.";
-    }
+    } // Error End， if the question is not in the list
   }
 }
