@@ -18,6 +18,7 @@ It can write simple code, greeting to you, answer you some questions and say goo
 - [x] Answer simple questions
 - [x] Say goodbye
 - [x] Write some simple code in some languages
+- [ ] Translation
 
 ## In the Running
 
